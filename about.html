@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Bentota Dream Hotel Supplies</title>
+    <meta name="description" content="Learn about BENTOTA DREAM HOLDING (PRIVATE) LIMITED, your dependable Sri Lanka-based hospitality supply and procurement partner serving hotels, resorts, and villas.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .about-text h3 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        .about-image img {
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .stat-item h4 {
+            font-size: 3rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+        }
+        .stat-item p {
+            font-weight: 500;
+            color: var(--text-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .values-section {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .value-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .value-card i {
+            font-size: 2rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        .value-card h4 {
+            color: var(--white);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        .value-card p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+        
+        .legal-box {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        @media (max-width: 992px) {
+            .about-content-wrapper { grid-template-columns: 1fr; }
+            .about-image { order: -1; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="scrolled"> <!-- Force scrolled state for inner pages if desired, or let JS handle it -->
+        <div class="container navbar">
+            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" style="color: var(--primary);">Home</a>
+                <a href="about.html" class="nav-link" style="color: var(--primary);">About Us</a>
+                <a href="products.html" class="nav-link" style="color: var(--primary);">Products & Solutions</a>
+                <a href="contact.html" class="nav-link" style="color: var(--primary);">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+            </nav>
+            
+            <button class="hamburger" style="color: var(--primary);">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Banner -->
+    <div class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1541971875076-8f970d573be6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="page-banner-content container">
+            <h1>About Us</h1>
+            <p>Your Dependable Sri Lankan Hospitality Procurement Partner</p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="about-content-wrapper">
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; font-size: 2rem;">Setting the Standard in Hotel Supply</h2>
+                    <p><strong>Bentota Dream Holding (Private) Limited</strong> is a premier Sri Lanka-based hospitality supply and procurement company dedicated to serving hotels, resorts, villas, and guesthouses with dependable sourcing and high-quality hotel essentials.</p>
+                    <p>Understanding the demanding nature of the hospitality landscape, we bridge the gap between quality manufacturing and daily hotel operations. Our extensive network and stringent quality control ensure that properties across the island receive products that not only meet but exceed the expectations of their sophisticated guests.</p>
+                    <p>From essential housekeeping tools and luxurious bed linen to beautifully crafted dining ware, we pride ourselves on delivering solutions that elevate the guest experience while providing robust durability and value to property owners.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hospitality Excellence">
+                </div>
+            </div>
+            
+            <div class="legal-box">
+                <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Corporate Registration Information</h3>
+                <p style="color: var(--text-dark);"><strong>BENTOTA DREAM HOLDING (PRIVATE) LIMITED</strong></p>
+                <p style="color: var(--text-light); font-size: 0.9rem;">ROC Registration No: PV122149</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 style="font-size: 2.5rem; margin-bottom: 15px;">Our Business Mission</h2>
+                <p style="color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">We are driven by a commitment to elevate hospitality standards through reliable procurement, uncompromising quality, and dedicated service excellence.</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-medal"></i>
+                    <h4>Uncompromising Quality</h4>
+                    <p>We source only premium materials to ensure that every linen, toiletry, and operational tool withstands the rigorous demands of commercial hospitality while delighting your guests.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Dependable Sourcing</h4>
+                    <p>We eliminate supply chain headaches for hoteliers. You can trust us for consistent availability, prompt deliveries, and transparent communication.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h4>Service Focus</h4>
+                    <p>We view ourselves as an extension of your own team. Whether you're making a bulk order or require specialized sourcing for a boutique setup, we are here to assist.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+                    <p>Your dependent B2B hospitality procurement partner, dedicated to elevating the standard of hotel supplies across Sri Lanka.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal Entity</h3>
+                    <p style="font-size: 0.85rem; line-height: 1.5;">
+                        <strong>BENTOTA DREAM HOLDING (PRIVATE) LIMITED</strong><br>
+                        ROC Registration No: PV122149
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>No.112/A, Kala Wila,<br>Beruwala, 12070<br>Sri Lanka</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+94 34 436 3073</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@bentotadream.lk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BENTOTA DREAM HOLDING (PRIVATE) LIMITED. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Ensure header acts correctly on non-home pages
+        document.querySelector('header').classList.add('scrolled');
+        window.addEventListener('scroll', () => {
+            document.querySelector('header').classList.add('scrolled');
+        });
+    </script>
+</body>
+</html>
