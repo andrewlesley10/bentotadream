@@ -4,285 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Bentota Dream Hotel Supplies</title>
-    <meta name="description" content="Get in touch with Bentota Dream Holding (Private) Limited. Request a quote or connect with our hotel procurement team in Beruwala, Sri Lanka.">
+    <meta name="description" content="Get in touch with Bentota Dream Holding (Private) Limited for all your hotel supply and procurement needs in Sri Lanka. Request a customized quote today.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        .contact-container {
+        header { top: 38px; } /* Push down for top bar */
+        header.scrolled { top: 0; }
+        
+        .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 60px;
-            padding: 80px 0;
         }
 
-        .contact-info-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info-card {
-            background: var(--white);
-            padding: 30px;
+        .contact-info-card {
+            background: var(--primary);
+            color: var(--white);
+            padding: 50px 40px;
             border-radius: 8px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-lg);
+            height: 100%;
+        }
+
+        .contact-info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-card p {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 40px;
+        }
+
+        .contact-method {
             display: flex;
-            align-items: flex-start;
-            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
         }
 
-        .info-card i {
-            font-size: 1.5rem;
+        .contact-method i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            font-size: 1.2rem;
             color: var(--secondary);
-            margin-top: 5px;
+            margin-right: 20px;
+            flex-shrink: 0;
+            transition: var(--transition);
         }
 
-        .info-card h4 {
+        .contact-method:hover i {
+            background: var(--secondary);
+            color: var(--white);
+        }
+
+        .method-details h4 {
             font-size: 1.1rem;
             margin-bottom: 5px;
+            font-weight: 500;
         }
 
-        .info-card p, .info-card a {
-            color: var(--text-light);
+        .method-details p {
+            margin-bottom: 0;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 0.95rem;
         }
 
-        .info-card a:hover {
-            color: var(--secondary);
-        }
-
+        /* Form Styles */
         .contact-form-wrapper {
             background: var(--white);
             padding: 50px;
             border-radius: 8px;
-            box-shadow: var(--shadow-md);
+            box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
         }
 
         .contact-form-wrapper h3 {
             font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .contact-form-wrapper p {
-            color: var(--text-light);
             margin-bottom: 30px;
-            font-size: 0.95rem;
+            color: var(--primary);
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            font-size: 0.9rem;
             font-weight: 500;
             color: var(--text-dark);
         }
 
         .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 15px;
             border: 1px solid var(--border-color);
             border-radius: 4px;
             font-family: inherit;
             font-size: 1rem;
             transition: var(--transition);
-            background-color: var(--bg-color);
+            background: var(--bg-color);
         }
 
         .form-control:focus {
             outline: none;
             border-color: var(--secondary);
-            background-color: var(--white);
-            box-shadow: 0 0 0 3px rgba(201, 162, 94, 0.2);
+            box-shadow: 0 0 0 3px rgba(15, 117, 189, 0.1);
         }
 
         textarea.form-control {
-            min-height: 150px;
             resize: vertical;
+            min-height: 150px;
         }
 
-        .form-message {
-            margin-top: 20px;
-        }
 
-        .success-msg {
-            background-color: rgba(46, 204, 113, 0.1);
-            color: var(--success);
-            padding: 15px;
-            border-radius: 4px;
-            border: 1px solid var(--success);
-            font-size: 0.95rem;
-        }
-
-        .error-msg {
-            background-color: rgba(231, 76, 60, 0.1);
-            color: var(--danger);
-            padding: 15px;
-            border-radius: 4px;
-            border: 1px solid var(--danger);
-            font-size: 0.95rem;
-        }
         
-        .legal-notice {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            font-size: 0.85rem;
-            color: var(--text-light);
-            line-height: 1.6;
+        /* Banner adjustment */
+        .page-banner {
+            background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-position: center;
+            margin-top: 38px;
         }
 
         @media (max-width: 992px) {
-            .contact-container { grid-template-columns: 1fr; }
-            .contact-form-wrapper { padding: 30px; }
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-form-wrapper {
+                padding: 30px;
+            }
+            .contact-info-card {
+                padding: 40px 30px;
+            }
+            header { top: 0; }
+            .top-bar { display: none; }
+            .page-banner { margin-top: 0; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container" style="display: flex; justify-content: flex-end; align-items: center;">
+            <div>
+                <a href="tel:+94344363073"><i class="fas fa-phone-alt"></i> +94 34 436 3073</a>
+                <a href="mailto:info@bentotadream.lk"><i class="fas fa-envelope"></i> info@bentotadream.lk</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Navigation -->
     <header class="scrolled">
         <div class="container navbar">
-            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+            <a href="index" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
             
             <nav class="nav-links">
-                <a href="index.html" class="nav-link" style="color: var(--primary);">Home</a>
-                <a href="about.html" class="nav-link" style="color: var(--primary);">About Us</a>
-                <a href="products.html" class="nav-link" style="color: var(--primary);">Products & Solutions</a>
-                <a href="contact.html" class="nav-link" style="color: var(--primary);">Contact</a>
-                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+                <a href="index" class="nav-link">Home</a>
+                <a href="about" class="nav-link">About Us</a>
+                <a href="products" class="nav-link">Products & Services</a>
+                <a href="clients" class="nav-link">Clients & Testimonials</a>
+                <a href="contact" class="nav-link active">Contact</a>
+                <a href="contact" class="btn btn-primary" style="margin-left: 10px;">Request a Quote</a>
             </nav>
             
-            <button class="hamburger" style="color: var(--primary);">
+            <button class="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </header>
 
     <!-- Page Banner -->
-    <div class="page-banner" style="background-image: url('https://images.unsplash.com/photo-1521783988139-89397d761dce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+    <div class="page-banner">
         <div class="page-banner-content container">
             <h1>Contact Us</h1>
-            <p>Connect with our procurement experts to discuss your requirements</p>
+            <p>Get in touch for specialized hotel procurement solutions</p>
         </div>
     </div>
 
     <!-- Contact Section -->
-    <section class="section" style="background-color: var(--bg-color);">
+    <section class="section section-light" style="padding-top: 80px;">
         <div class="container">
-            <div class="contact-container">
+            <div class="contact-grid">
                 
                 <!-- Contact Info -->
-                <div class="contact-info">
-                    <div style="margin-bottom: 30px;">
-                        <h2 class="section-title" style="text-align: left; font-size: 2rem;">Get In Touch</h2>
-                        <p style="color: var(--text-light);">We are here to answer any questions you have about our catalogue, bulk orders, or custom hotel setup solutions. Reach out to us and we’ll respond as soon as we can.</p>
-                    </div>
+                <div>
+                    <div class="contact-info-card">
+                        <h3>Get In Touch</h3>
+                        <p>Fill out the form to request a quote, schedule a consultation, or inquire about our product catalogue. Our team aims to respond within 24 hours.</p>
 
-                    <div class="contact-info-cards">
-                        <div class="info-card">
+                        <div class="contact-method">
                             <i class="fas fa-map-marker-alt"></i>
-                            <div>
+                            <div class="method-details">
                                 <h4>Head Office</h4>
                                 <p>No.112/A, Kala Wila,<br>Beruwala, 12070<br>Sri Lanka</p>
                             </div>
                         </div>
 
-                        <div class="info-card">
+                        <div class="contact-method">
                             <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <h4>Phone Support</h4>
-                                <p><a href="tel:+94344363073">+94 34 436 3073</a></p>
+                            <div class="method-details">
+                                <h4>Phone</h4>
+                                <p>Call Us Directly:<br>+94 34 436 3073</p>
                             </div>
                         </div>
 
-                        <div class="info-card">
+                        <div class="contact-method">
                             <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email Enquiries</h4>
-                                <p><a href="mailto:info@bentotadream.lk">info@bentotadream.lk</a></p>
+                            <div class="method-details">
+                                <h4>Email</h4>
+                                <p>info@bentotadream.lk</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="legal-notice">
-                        <strong>BENTOTA DREAM HOLDING (PRIVATE) LIMITED</strong><br>
-                        ROC Registration No: PV122149<br>
-                        Website: www.bentotadream.lk
                     </div>
                 </div>
 
                 <!-- Contact Form -->
-                <div class="contact-form-wrapper">
-                    <h3>Send a Message</h3>
-                    <p>Fill out the form below to request a quote or ask. Fields masked with * are required.</p>
-
-                    <form id="contactForm" method="POST" action="contact.php">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="phone">Phone / WhatsApp</label>
-                            <input type="text" id="phone" name="phone" class="form-control" placeholder="+94 77 123 4567">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Your Enquiry *</label>
-                            <textarea id="message" name="message" class="form-control" required placeholder="Please provide details about the items or services you are interested in..."></textarea>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enquiry</button>
+                <div>
+                    <div class="contact-form-wrapper">
+                        <h3>Send Us a Message</h3>
                         
-                        <div id="formMessage" class="form-message"></div>
-                    </form>
+                        <div id="form-message" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 4px;"></div>
+
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Your Name / Company Name *</label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="e.g. John Doe / Ocean View Resort">
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+94 7X XXX XXXX">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject / Inquiry Type</label>
+                                <select id="subject" name="subject" class="form-control">
+                                    <option value="General Inquiry">General Inquiry</option>
+                                    <option value="Request a Quote">Request a Quote</option>
+                                    <option value="Property Setup">Property Setup</option>
+                                    <option value="Hotel Linen">Hotel Linen</option>
+                                    <option value="Guest Amenities">Guest Amenities</option>
+                                    <option value="Housekeeping">Housekeeping Items</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" class="form-control" required placeholder="Please provide details about your property size and specific requirements..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer; padding: 15px;">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                        </form>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
+
+
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
-                    <p>Your dependent B2B hospitality procurement partner, dedicated to elevating the standard of hotel supplies across Sri Lanka.</p>
+                <div class="footer-col" style="grid-column: span 1;">
+                    <a href="index" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+                    <p style="font-size: 0.9rem;">Bentota Dream Hotel Supplies is a leading hospitality procurement company serving hotels across Sri Lanka. We deliver consistency, quality, and reliability.</p>
+
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="products">Products & Services</a></li>
+                        <li><a href="clients">Clients & Testimonials</a></li>
+                        <li><a href="contact">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h3>Legal Entity</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.5;">
-                        <strong>BENTOTA DREAM HOLDING (PRIVATE) LIMITED</strong><br>
-                        ROC Registration No: PV122149
-                    </p>
+                    <h3>Products & Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="products">Bed and Bath Linen</a></li>
+                        <li><a href="products">Guest Amenities</a></li>
+                        <li><a href="products">Housekeeping Items</a></li>
+                        <li><a href="products">Hotel Stationery</a></li>
+                        <li><a href="products">In Room Appliances</a></li>
+                        <li><a href="products">Interior Signage</a></li>
+                    </ul>
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3>Contact Information</h3>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>No.112/A, Kala Wila,<br>Beruwala, 12070<br>Sri Lanka</span>
+                            <span><strong>HQ:</strong> No.112/A, Kala Wila, Beruwala, 12070<br>Sri Lanka</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-boxes"></i>
+                            <span><strong>Dispatch Units:</strong> Colombo, Galle, Kandy</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
@@ -295,27 +332,86 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
+            
+            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <p>&copy; 2026 BENTOTA DREAM HOLDING (PRIVATE) LIMITED. All rights reserved.</p>
+                <div style="font-size: 0.85rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.7); margin-right: 15px;">Privacy Policy</a> | 
+                    <span style="margin-left: 15px;">ROC Registration No: PV122149</span>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
     <script>
-        // Check URL parameters for subject pre-fill
-        document.addEventListener('DOMContentLoaded', () => {
-            document.querySelector('header').classList.add('scrolled');
-            window.addEventListener('scroll', () => {
-                document.querySelector('header').classList.add('scrolled');
-            });
+        document.querySelector('header').classList.add('scrolled');
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 38 && window.innerWidth > 992) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+                if(window.scrollY <= 38) header.classList.add('scrolled');
+            }
+        });
 
+        // Form submission logic (same as previous implementation)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const msgBox = document.getElementById('form-message');
+            
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" style="margin-left: 8px;"></i>';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+
+            fetch('contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if(response.ok) {
+                    msgBox.style.display = 'block';
+                    msgBox.style.backgroundColor = 'rgba(46, 204, 113, 0.1)';
+                    msgBox.style.color = 'var(--success)';
+                    msgBox.style.border = '1px solid var(--success)';
+                    msgBox.innerHTML = '<i class="fas fa-check-circle"></i> Your message has been sent successfully! We will get back to you soon.';
+                    this.reset();
+                } else {
+                    throw new Error('Server returned an error');
+                }
+            })
+            .catch(error => {
+                msgBox.style.display = 'block';
+                msgBox.style.backgroundColor = 'rgba(231, 76, 60, 0.1)';
+                msgBox.style.color = 'var(--danger)';
+                msgBox.style.border = '1px solid var(--danger)';
+                msgBox.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact us directly via email.';
+            })
+            .finally(() => {
+                btn.innerHTML = 'Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>';
+                btn.disabled = false;
+            });
+        });
+        
+        // Auto-select subject based on URL parameter
+        window.addEventListener('DOMContentLoaded', (event) => {
             const urlParams = new URLSearchParams(window.location.search);
-            const subject = urlParams.get('subject');
-            if (subject) {
-                const messageBox = document.getElementById('message');
-                if (messageBox) {
-                    messageBox.value = `I am interested in asking about: ${subject}\n\n`;
+            const subjectParam = urlParams.get('subject');
+            if(subjectParam) {
+                const selectElement = document.getElementById('subject');
+                const optionExists = Array.from(selectElement.options).some(option => option.value === subjectParam);
+                
+                if(optionExists) {
+                    selectElement.value = subjectParam;
+                } else {
+                    // Create new option if it doesn't exist
+                    const newOption = new Option(subjectParam, subjectParam);
+                    selectElement.add(newOption);
+                    selectElement.value = subjectParam;
                 }
             }
         });

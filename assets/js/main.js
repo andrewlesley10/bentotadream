@@ -21,11 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Active Link Highlighting based on current page
-  const currentLocation = location.pathname.split('/').pop();
+  const currentLocation = location.pathname.split('/').pop() || 'index';
   const menuItems = document.querySelectorAll('.nav-link');
   
   menuItems.forEach(item => {
-    if (item.getAttribute('href') === currentLocation || (currentLocation === '' && item.getAttribute('href') === 'index.html')) {
+    const href = item.getAttribute('href');
+    if (href === currentLocation || (currentLocation === 'index' && href === 'index')) {
       item.classList.add('active');
     }
   });

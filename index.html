@@ -7,7 +7,12 @@
     <meta name="description" content="Bentota Dream Holding (Private) Limited is a leading B2B hotel procurement company in Sri Lanka. Supplying high-quality linen, toiletries, housekeeping, and complete hotel setup solutions.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Specific page styles */
+        header { top: 38px; } /* Push down for top bar */
+        header.scrolled { top: 0; }
+        
         .hero {
             height: 100vh;
             min-height: 600px;
@@ -16,6 +21,7 @@
             align-items: center;
             color: var(--white);
             text-align: center;
+            margin-top: 38px; /* account for top bar */
         }
         .hero-title {
             font-size: 3.5rem;
@@ -29,24 +35,14 @@
             color: rgba(255, 255, 255, 0.9);
             font-weight: 300;
         }
-        
-        .intro-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .intro-image img {
-            border-radius: 8px;
-            box-shadow: var(--shadow-lg);
-        }
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 50px;
         }
+        
         .category-card {
             background: var(--white);
             border-radius: 8px;
@@ -76,16 +72,11 @@
             flex-direction: column;
             justify-content: space-between;
         }
-        .category-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-        .category-card h3 {
+        .category-card-body h3 {
             font-size: 1.25rem;
             margin-bottom: 15px;
         }
-        .category-card p {
+        .category-card-body p {
             color: var(--text-light);
             font-size: 0.95rem;
             margin-bottom: 20px;
@@ -101,26 +92,56 @@
             color: var(--white);
             margin-bottom: 20px;
         }
+        
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .reach-banner {
+            background: linear-gradient(rgba(14, 27, 54, 0.9), rgba(14, 27, 54, 0.9)), url('https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover fixed;
+            padding: 100px 0;
+            text-align: center;
+            color: var(--white);
+        }
+        .reach-banner h2 { color: var(--white); font-size: 2.5rem; margin-bottom: 20px; }
+        .reach-banner p { font-size: 1.2rem; color: rgba(255, 255, 255, 0.9); }
 
         @media (max-width: 992px) {
             .hero-title { font-size: 2.5rem; }
-            .intro-grid { grid-template-columns: 1fr; }
+            .split-section { grid-template-columns: 1fr; }
+            header { top: 0; }
+            .top-bar { display: none; }
+            .hero { margin-top: 0; }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container" style="display: flex; justify-content: flex-end; align-items: center;">
+            <div>
+                <a href="tel:+94344363073"><i class="fas fa-phone-alt"></i> +94 34 436 3073</a>
+                <a href="mailto:info@bentotadream.lk"><i class="fas fa-envelope"></i> info@bentotadream.lk</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Navigation -->
     <header>
         <div class="container navbar">
-            <a href="index.html" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+            <a href="index" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
             
             <nav class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="about.html" class="nav-link">About Us</a>
-                <a href="products.html" class="nav-link">Products & Solutions</a>
-                <a href="contact.html" class="nav-link">Contact</a>
-                <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+                <a href="index" class="nav-link active">Home</a>
+                <a href="about" class="nav-link">About Us</a>
+                <a href="products" class="nav-link">Products & Services</a>
+                <a href="clients" class="nav-link">Clients & Testimonials</a>
+                <a href="contact" class="nav-link">Contact</a>
+                <a href="contact" class="btn btn-primary" style="margin-left: 10px;">Request a Quote</a>
             </nav>
             
             <button class="hamburger">
@@ -132,69 +153,207 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="hero-title">Your Trusted Hotel Supply & Procurement Partner in Sri Lanka</h1>
-            <p class="hero-subtitle">From premium linen and guest amenities to housekeeping essentials and complete hotel setup solutions, we help hotels, villas, and resorts source everything in one place.</p>
+            <h1 class="hero-title">Your Trusted Hotel Supply Partner in Sri Lanka</h1>
+            <p class="hero-subtitle">Delivering hotel linen, guest amenities, toiletries, and complete property setup projects across the island with trusted quality.</p>
             <div class="hero-cta">
-                <a href="products.html" class="btn btn-primary">Explore Our Solutions</a>
-                <a href="contact.html" class="btn btn-outline" style="margin-left: 15px;">Contact Us</a>
+                <a href="products" class="btn btn-primary">Explore Our Products</a>
+                <a href="#setup" class="btn btn-outline" style="margin-left: 15px; color: var(--white); border-color: var(--white); text-transform: none;">View Property Setups</a>
             </div>
         </div>
     </section>
 
-    <!-- Introduction Section -->
+    <!-- What We Do vs Why Us -->
     <section class="section section-light">
         <div class="container">
-            <div class="intro-grid">
-                <div class="intro-content">
-                    <h2 class="section-title" style="text-align: left;">Elevating Hospitality Procurement</h2>
-                    <p class="mb-1">Bentota Dream Holding (Private) Limited specializes in seamless, high-quality B2B sourcing for the hospitality sector across Sri Lanka.</p>
-                    <p class="mb-2">Whether you are outfitting a newly built luxury resort, managing an intimate boutique villa, or keeping an established hotel fully stocked, we provide a reliable, single-point procurement experience. Our meticulously curated catalogue ensures that every touchpoint—from the thread count of your bed linens to the presentation of your guest amenities—reflects premium standards.</p>
-                    <a href="about.html" class="btn btn-outline">Learn More About Us</a>
+            <div class="split-section">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">What We Do</h2>
+                    <p style="color: var(--text-light); margin-bottom: 20px; font-size: 1.05rem;">
+                        Bentota Dream Holding (Private) Limited specializes in simplifying hotel sourcing for properties across Sri Lanka. We bring consistency, quality, and reliability to every project.
+                    </p>
+                    <ul class="why-us-list" style="margin-top: 0; color: var(--primary);">
+                        <li><i class="fas fa-chevron-right" style="color: var(--secondary);"></i> Guest Rooms: Linen, amenities, appliances</li>
+                        <li><i class="fas fa-chevron-right" style="color: var(--secondary);"></i> Housekeeping: Tools, trolleys, chemicals</li>
+                        <li><i class="fas fa-chevron-right" style="color: var(--secondary);"></i> Food & Beverage: Kitchenware, buffet items</li>
+                        <li><i class="fas fa-chevron-right" style="color: var(--secondary);"></i> Property Setup: Complete room solutions</li>
+                    </ul>
+                    <a href="about" class="btn btn-primary" style="margin-top: 20px;">Read Our Story</a>
                 </div>
-                <div class="intro-image">
-                    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Premium Hotel Room Setup">
+                <div>
+                    <h2 style="font-size: 2.2rem; margin-bottom: 20px;">Why Choose Us?</h2>
+                    <p style="color: var(--text-light); margin-bottom: 20px; font-size: 1.05rem;">
+                        At Bentota Dream, we don’t just deliver products—we deliver trust, efficiency, and peace of mind.
+                    </p>
+                    <ul class="why-us-list">
+                        <li><i class="fas fa-check-circle"></i> Complete One-Stop Procurement Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Expertise in Boutique to Luxury Properties</li>
+                        <li><i class="fas fa-check-circle"></i> Unmatched Quality and Durability</li>
+                        <li><i class="fas fa-check-circle"></i> Strong Centralized Vendor Network</li>
+                        <li><i class="fas fa-check-circle"></i> Personalized Island-Wide Logistics</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Category Highlights -->
+    <!-- Product Categories -->
     <section class="section" style="background-color: var(--bg-color);">
         <div class="container">
-            <h2 class="section-title">Our Solutions</h2>
+            <h2 class="section-title">Products & Services</h2>
             <p class="section-subtitle">We supply a comprehensive range of hospitality essentials designed to enhance guest comfort and streamline operations.</p>
             
             <div class="category-grid">
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hotel Linen" class="category-card-img">
                     <div class="category-card-body">
-                        <h3>Hotel Linen</h3>
-                        <p>Premium bed sheets, plush towels, duvets, and mattress protectors.</p>
-                        <div><a href="products.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">View</a></div>
+                        <h3>Hotel Bed & Bath Linen</h3>
+                        <p>Soft, stylish, and durable—bed and bath linen that delivers a five-star guest experience.</p>
+                        <div><a href="products" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Explore</a></div>
                     </div>
                 </div>
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Guest Amenities" class="category-card-img">
                     <div class="category-card-body">
-                        <h3>Guest Amenities</h3>
-                        <p>Luxurious toiletries, vanity kits, and customized branded solutions.</p>
-                        <div><a href="products.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">View</a></div>
+                        <h3>Guest Amenities & Toiletries</h3>
+                        <p>Quality hotel guest amenities to elevate hospitality and exceed guest expectations.</p>
+                        <div><a href="products" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Explore</a></div>
                     </div>
                 </div>
                 <div class="category-card">
                     <img src="https://images.unsplash.com/photo-1585421514284-efb74c2b69ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Housekeeping" class="category-card-img">
                     <div class="category-card-body">
                         <h3>Housekeeping</h3>
-                        <p>Professional cleaning supplies, tools, and housekeeping trolleys.</p>
-                        <div><a href="products.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">View</a></div>
+                        <p>Tools and supplies to ensure top-notch cleanliness and property care.</p>
+                        <div><a href="products" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Explore</a></div>
                     </div>
                 </div>
                 <div class="category-card">
-                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Setup Solutions" class="category-card-img">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Room Stationery" class="category-card-img">
                     <div class="category-card-body">
-                        <h3>Setup Solutions</h3>
-                        <p>Complete procurement support for new villas, startups, and guesthouses.</p>
-                        <div><a href="products.html" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">View</a></div>
+                        <h3>Hotel Stationery</h3>
+                        <p>Custom hotel stationery essentials that add a professional touch to every guest experience.</p>
+                        <div><a href="products" class="btn btn-outline" style="padding: 8px 20px; font-size: 0.85rem;">Explore</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Setup Gallery -->
+    <section id="setup" class="section section-light">
+        <div class="container text-center">
+            <h2 class="section-title">Property Setup Projects</h2>
+            <p class="section-subtitle">A glimpse into some of our beautifully executed full-property setups and supply integrations.</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80" alt="Bedroom Setup">
+                    <div class="gallery-caption">Luxury Villa Setup</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80" alt="Resort Setup">
+                    <div class="gallery-caption">Resort Bedroom Configuration</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=500&q=80" alt="Bathroom Assets">
+                    <div class="gallery-caption">Boutique Guest Amenities</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=500&q=80" alt="Lobby Details">
+                    <div class="gallery-caption">Hotel Reception & Signage</div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 40px;">
+                <a href="contact" class="btn btn-primary">Start Your Own Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Banner -->
+    <section class="reach-banner">
+        <div class="container">
+            <h2>We reach where others don't</h2>
+            <p>We deliver where hospitality thrives – No matter the distance across Sri Lanka.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" style="background-color: var(--bg-color);">
+        <div class="container">
+            <h2 class="section-title">Clients & Testimonials</h2>
+            <p class="section-subtitle">Real experiences from hoteliers and resort owners who trust our quality.</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotel Room">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Bentota Dream has been outstanding! Their linens are high-quality, soft, and durable. The service is reliable and they provide excellent customer support. Highly recommended for anyone looking for top-notch suppliers!"</p>
+                        <p class="testimonial-author"><span style="font-size: 0.85rem; color: var(--text-light); font-weight: 400;">Boutique Villa Owner</span></p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4df85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotel Room">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Had a good experience with them. Best rates & timely delivery of items. We got most of our items from them after doing thorough market research including mattresses, linen, and amenities. It’s like a one-stop solution."</p>
+                        <p class="testimonial-author"><span style="font-size: 0.85rem; color: var(--text-light); font-weight: 400;">Resort General Manager</span></p>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotel Room">
+                    </div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"First and foremost, the quality of the hotel amenities provided was exceptional. The products reflected a high level of attention to detail and luxury. Punctual delivery without any delays."</p>
+                        <p class="testimonial-author"><span style="font-size: 0.85rem; color: var(--text-light); font-weight: 400;">Hospitality Procurement Head</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Blogs -->
+    <section class="section section-light">
+        <div class="container">
+            <h2 class="section-title">Insights from Our Blog</h2>
+            <p class="section-subtitle">Stay up to date with the latest standards, trends, and guidelines in hospitality sourcing.</p>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1560067174-c5a3a8f37060?auto=format&fit=crop&w=500&q=80" alt="Linen Standards" class="blog-img">
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="#">What Are Hotel Linen Standards? A Complete Guide</a></h3>
+                        <p class="blog-desc">When guests walk into a hotel room, one of the first things they feel is the linen — the crisp sheets and soft towels...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1542314831-c6a4d1409eae?auto=format&fit=crop&w=500&q=80" alt="Hotel Supplies 2026" class="blog-img">
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="#">Hotel Supplies 2026: Must-Have Essentials</a></h3>
+                        <p class="blog-desc">The hospitality industry is changing faster than ever, and 2026 is shaping up to be a defining year for hoteliers...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=80" alt="Eco Amenities" class="blog-img">
+                    <div class="blog-content">
+                        <h3 class="blog-title"><a href="#">Eco-Friendly Hotel Amenities — Modern Guide</a></h3>
+                        <p class="blog-desc">Modern hospitality has entered a new era where guests care as deeply about the planet as they do about luxury...</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right" style="margin-left: 5px;"></i></a>
                     </div>
                 </div>
             </div>
@@ -206,7 +365,7 @@
         <div class="container">
             <h2>Ready to Upgrade Your Hospitality Supplies?</h2>
             <p style="margin-bottom: 30px; font-size: 1.1rem; color: rgba(255, 255, 255, 0.9);">Contact us today for a customized quote tailored to your property's precise needs.</p>
-            <a href="contact.html" class="btn btn-primary" style="background-color: var(--primary); border-color: var(--primary);">Get in Touch</a>
+            <a href="contact" class="btn btn-primary" style="background-color: var(--primary); border-color: var(--primary);">Get in Touch</a>
         </div>
     </section>
 
@@ -214,32 +373,45 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
-                    <p>Your dependent B2B hospitality procurement partner, dedicated to elevating the standard of hotel supplies across Sri Lanka.</p>
+                <div class="footer-col" style="grid-column: span 1;">
+                    <a href="index" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
+                    <p style="font-size: 0.9rem;">Bentota Dream Hotel Supplies is a leading hospitality procurement company serving hotels across Sri Lanka. We deliver consistency, quality, and reliability.</p>
+
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Quick Links</h3>
+                    <h3>Navigation</h3>
                     <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="products.html">Products</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="index">Home</a></li>
+                        <li><a href="about">About Us</a></li>
+                        <li><a href="products">Products & Services</a></li>
+                        <li><a href="clients">Clients & Testimonials</a></li>
+                        <li><a href="contact">Contact Us</a></li>
                     </ul>
                 </div>
+
                 <div class="footer-col">
-                    <h3>Legal Entity</h3>
-                    <p style="font-size: 0.85rem; line-height: 1.5;">
-                        <strong>BENTOTA DREAM HOLDING (PRIVATE) LIMITED</strong><br>
-                        ROC Registration No: PV122149
-                    </p>
+                    <h3>Products & Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="products">Bed and Bath Linen</a></li>
+                        <li><a href="products">Guest Amenities</a></li>
+                        <li><a href="products">Housekeeping Items</a></li>
+                        <li><a href="products">Hotel Stationery</a></li>
+                        <li><a href="products">In Room Appliances</a></li>
+                        <li><a href="products">Interior Signage</a></li>
+                    </ul>
                 </div>
+                
                 <div class="footer-col">
-                    <h3>Contact</h3>
+                    <h3>Contact Information</h3>
                     <ul class="footer-contact">
                         <li>
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>No.112/A, Kala Wila,<br>Beruwala, 12070<br>Sri Lanka</span>
+                            <span><strong>HQ:</strong> No.112/A, Kala Wila, Beruwala, 12070<br>Sri Lanka</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-boxes"></i>
+                            <span><strong>Dispatch Units:</strong> Colombo, Galle, Kandy</span>
                         </li>
                         <li>
                             <i class="fas fa-phone"></i>
@@ -252,12 +424,28 @@
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
+            
+            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <p>&copy; 2026 BENTOTA DREAM HOLDING (PRIVATE) LIMITED. All rights reserved.</p>
+                <div style="font-size: 0.85rem;">
+                    <a href="#" style="color: rgba(255,255,255,0.7); margin-right: 15px;">Privacy Policy</a> | 
+                    <span style="margin-left: 15px;">ROC Registration No: PV122149</span>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        // Check local storage for top bar
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 38 && window.innerWidth > 992) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>
