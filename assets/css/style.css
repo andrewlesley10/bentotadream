@@ -861,21 +861,21 @@ textarea.form-control {
 }
 
 .logo-item .brand-name {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0.5px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .logo-item .location {
   font-family: 'Inter', sans-serif;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  color: var(--text-light);
-  letter-spacing: 3px;
-  font-weight: 400;
-  opacity: 0.8;
+  color: #b59461; /* Muted Gold */
+  letter-spacing: 4px;
+  font-weight: 500;
+  opacity: 0.9;
 }
 
 .logo-sep {

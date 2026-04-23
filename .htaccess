@@ -1,4 +1,8 @@
+DirectoryIndex home.html
 RewriteEngine On
+
+# Redirect old index to new home
+RewriteRule ^index(\.html)?$ /home [R=301,L]
 
 # Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
