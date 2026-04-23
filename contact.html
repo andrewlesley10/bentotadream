@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Bentota Dream Hotel Supplies</title>
-    <meta name="description" content="Get in touch with Bentota Dream Holding (Private) Limited for all your hotel supply and procurement needs in Sri Lanka. Request a customized quote today.">
+    <meta name="description"
+        content="Get in touch with Bentota Dream Holding (Private) Limited for all your hotel supply and procurement needs in Sri Lanka. Request a customized quote today.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        header { top: 38px; } /* Push down for top bar */
-        header.scrolled { top: 0; }
-        
+        header {
+            top: 38px;
+        }
+
+        /* Push down for top bar */
+        header.scrolled {
+            top: 0;
+        }
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1.5fr;
@@ -124,7 +132,7 @@
         }
 
 
-        
+
         /* Banner adjustment */
         .page-banner {
             background-image: url('https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -136,18 +144,30 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
             .contact-form-wrapper {
                 padding: 30px;
             }
+
             .contact-info-card {
                 padding: 40px 30px;
             }
-            header { top: 0; }
-            .top-bar { display: none; }
-            .page-banner { margin-top: 0; }
+
+            header {
+                top: 0;
+            }
+
+            .top-bar {
+                display: none;
+            }
+
+            .page-banner {
+                margin-top: 0;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Top Bar -->
@@ -164,7 +184,7 @@
     <header class="scrolled">
         <div class="container navbar">
             <a href="index" class="logo-link"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
-            
+
             <nav class="nav-links">
                 <a href="index" class="nav-link">Home</a>
                 <a href="about" class="nav-link">About Us</a>
@@ -173,7 +193,7 @@
                 <a href="contact" class="nav-link active">Contact</a>
                 <a href="contact" class="btn btn-primary" style="margin-left: 10px;">Request a Quote</a>
             </nav>
-            
+
             <button class="hamburger">
                 <i class="fas fa-bars"></i>
             </button>
@@ -192,12 +212,13 @@
     <section class="section section-light" style="padding-top: 80px;">
         <div class="container">
             <div class="contact-grid">
-                
+
                 <!-- Contact Info -->
                 <div>
                     <div class="contact-info-card">
                         <h3>Get In Touch</h3>
-                        <p>Fill out the form to request a quote, schedule a consultation, or inquire about our product catalogue. Our team aims to respond within 24 hours.</p>
+                        <p>Fill out the form to request a quote, schedule a consultation, or inquire about our product
+                            catalogue. Our team aims to respond within 24 hours.</p>
 
                         <div class="contact-method">
                             <i class="fas fa-map-marker-alt"></i>
@@ -229,23 +250,27 @@
                 <div>
                     <div class="contact-form-wrapper">
                         <h3>Send Us a Message</h3>
-                        
-                        <div id="form-message" style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 4px;"></div>
+
+                        <div id="form-message"
+                            style="display: none; padding: 15px; margin-bottom: 20px; border-radius: 4px;"></div>
 
                         <form id="contactForm">
                             <div class="form-group">
                                 <label for="name">Your Name / Company Name *</label>
-                                <input type="text" id="name" name="name" class="form-control" required placeholder="e.g. John Doe / Ocean View Resort">
+                                <input type="text" id="name" name="name" class="form-control" required
+                                    placeholder="e.g. John Doe / Ocean View Resort">
                             </div>
 
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div class="form-group">
                                     <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+                                    <input type="email" id="email" name="email" class="form-control" required
+                                        placeholder="john@example.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+94 7X XXX XXXX">
+                                    <input type="tel" id="phone" name="phone" class="form-control"
+                                        placeholder="+94 7X XXX XXXX">
                                 </div>
                             </div>
 
@@ -263,10 +288,13 @@
 
                             <div class="form-group">
                                 <label for="message">Your Message *</label>
-                                <textarea id="message" name="message" class="form-control" required placeholder="Please provide details about your property size and specific requirements..."></textarea>
+                                <textarea id="message" name="message" class="form-control" required
+                                    placeholder="Please provide details about your property size and specific requirements..."></textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-primary" style="width: 100%; border: none; cursor: pointer; padding: 15px;">Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
+                            <button type="submit" class="btn btn-primary"
+                                style="width: 100%; border: none; cursor: pointer; padding: 15px;">Send Message <i
+                                    class="fas fa-paper-plane" style="margin-left: 8px;"></i></button>
                         </form>
                     </div>
                 </div>
@@ -283,10 +311,11 @@
             <div class="footer-grid">
                 <div class="footer-col" style="grid-column: span 1;">
                     <a href="index" class="footer-logo"><img src="images/logo.jpg" alt="Bentota Dream Logo"></a>
-                    <p style="font-size: 0.9rem;">Bentota Dream Hotel Supplies is a leading hospitality procurement company serving hotels across Sri Lanka. We deliver consistency, quality, and reliability.</p>
+                    <p style="font-size: 0.9rem;">Bentota Dream Hotel Supplies is a leading hospitality procurement
+                        company serving hotels across Sri Lanka. We deliver consistency, quality, and reliability.</p>
 
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul class="footer-links">
@@ -309,7 +338,7 @@
                         <li><a href="products">Interior Signage</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-col">
                     <h3>Contact Information</h3>
                     <ul class="footer-contact">
@@ -332,11 +361,12 @@
                     </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
+
+            <div class="footer-bottom"
+                style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
                 <p>&copy; 2026 BENTOTA DREAM HOLDING (PRIVATE) LIMITED. All rights reserved.</p>
                 <div style="font-size: 0.85rem;">
-                    <a href="#" style="color: rgba(255,255,255,0.7); margin-right: 15px;">Privacy Policy</a> | 
+                    <a href="#" style="color: rgba(255,255,255,0.7); margin-right: 15px;">Privacy Policy</a> |
                     <span style="margin-left: 15px;">ROC Registration No: PV122149</span>
                 </div>
             </div>
@@ -352,17 +382,17 @@
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
-                if(window.scrollY <= 38) header.classList.add('scrolled');
+                if (window.scrollY <= 38) header.classList.add('scrolled');
             }
         });
 
         // Form submission logic (same as previous implementation)
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const btn = this.querySelector('button[type="submit"]');
             const msgBox = document.getElementById('form-message');
-            
+
             btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin" style="margin-left: 8px;"></i>';
             btn.disabled = true;
 
@@ -372,40 +402,40 @@
                 method: 'POST',
                 body: formData
             })
-            .then(response => {
-                if(response.ok) {
+                .then(response => {
+                    if (response.ok) {
+                        msgBox.style.display = 'block';
+                        msgBox.style.backgroundColor = 'rgba(46, 204, 113, 0.1)';
+                        msgBox.style.color = 'var(--success)';
+                        msgBox.style.border = '1px solid var(--success)';
+                        msgBox.innerHTML = '<i class="fas fa-check-circle"></i> Your message has been sent successfully! We will get back to you soon.';
+                        this.reset();
+                    } else {
+                        throw new Error('Server returned an error');
+                    }
+                })
+                .catch(error => {
                     msgBox.style.display = 'block';
-                    msgBox.style.backgroundColor = 'rgba(46, 204, 113, 0.1)';
-                    msgBox.style.color = 'var(--success)';
-                    msgBox.style.border = '1px solid var(--success)';
-                    msgBox.innerHTML = '<i class="fas fa-check-circle"></i> Your message has been sent successfully! We will get back to you soon.';
-                    this.reset();
-                } else {
-                    throw new Error('Server returned an error');
-                }
-            })
-            .catch(error => {
-                msgBox.style.display = 'block';
-                msgBox.style.backgroundColor = 'rgba(231, 76, 60, 0.1)';
-                msgBox.style.color = 'var(--danger)';
-                msgBox.style.border = '1px solid var(--danger)';
-                msgBox.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact us directly via email.';
-            })
-            .finally(() => {
-                btn.innerHTML = 'Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>';
-                btn.disabled = false;
-            });
+                    msgBox.style.backgroundColor = 'rgba(231, 76, 60, 0.1)';
+                    msgBox.style.color = 'var(--danger)';
+                    msgBox.style.border = '1px solid var(--danger)';
+                    msgBox.innerHTML = '<i class="fas fa-exclamation-circle"></i> Sorry, there was an error sending your message. Please try again or contact us directly via email.';
+                })
+                .finally(() => {
+                    btn.innerHTML = 'Send Message <i class="fas fa-paper-plane" style="margin-left: 8px;"></i>';
+                    btn.disabled = false;
+                });
         });
-        
+
         // Auto-select subject based on URL parameter
         window.addEventListener('DOMContentLoaded', (event) => {
             const urlParams = new URLSearchParams(window.location.search);
             const subjectParam = urlParams.get('subject');
-            if(subjectParam) {
+            if (subjectParam) {
                 const selectElement = document.getElementById('subject');
                 const optionExists = Array.from(selectElement.options).some(option => option.value === subjectParam);
-                
-                if(optionExists) {
+
+                if (optionExists) {
                     selectElement.value = subjectParam;
                 } else {
                     // Create new option if it doesn't exist
@@ -417,4 +447,5 @@
         });
     </script>
 </body>
+
 </html>
